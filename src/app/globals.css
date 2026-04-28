@@ -1,0 +1,47 @@
+@import "tailwindcss";
+
+:root {
+  --p:        #2D5A3D;
+  --pd:       #1F4029;
+  --ink:      #1A1A18;
+  --paper:    #F8F4EB;
+  --surface:  #EDE7D9;
+  --muted:    #6B6B62;
+  --soft:     rgba(45, 90, 61, 0.08);
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: "Inter", system-ui, sans-serif;
+}
+
+.display { font-family: "DM Serif Display", Georgia, serif; letter-spacing: -0.018em; line-height: 1.0; font-weight: 400; }
+.display em { font-style: italic; color: var(--p); }
+
+.pill-out {
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  padding: 0.85rem 1.6rem; border-radius: 9999px;
+  border: 2px solid var(--ink); color: var(--ink);
+  font-weight: 600; font-size: 0.95rem;
+  transition: background 0.18s, color 0.18s, transform 0.15s;
+}
+.pill-out:hover { background: var(--ink); color: var(--paper); transform: translateY(-1px); }
+
+.pill-fill {
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  padding: 0.85rem 1.6rem; border-radius: 9999px;
+  background: var(--p); color: #fff;
+  font-weight: 600; font-size: 0.95rem;
+  transition: transform 0.18s, box-shadow 0.18s;
+  box-shadow: 0 8px 24px -10px var(--p);
+}
+.pill-fill:hover { transform: translateY(-2px); box-shadow: 0 14px 36px -10px var(--p); }
+
+.grain { position: relative; }
+.grain::after {
+  content: ""; position: absolute; inset: 0; pointer-events: none; mix-blend-mode: multiply; opacity: 0.025;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%25' height='100%25' filter='url(%23n)' opacity='0.6'/></svg>");
+}
