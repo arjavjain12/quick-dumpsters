@@ -29,19 +29,18 @@ export default function Nav() {
       >
         <div className="max-w-6xl mx-auto px-5 sm:px-8 py-5 flex items-center justify-between gap-4 border-b" style={{ borderColor: 'var(--surface)' }}>
           <Link href="/" className="flex items-baseline gap-3 shrink-0">
-            <span className="display text-2xl sm:text-3xl" style={{ color: 'var(--p)' }}>{site.shortName}</span>
-            <span className="hidden md:inline-block text-[11px] uppercase tracking-[0.22em]" style={{ color: 'var(--muted)' }}>{site.city}</span>
+            <span className="display text-2xl sm:text-3xl whitespace-nowrap" style={{ color: 'var(--p)' }}>{site.shortName}</span>
           </Link>
 
-          <nav className="hidden lg:flex items-center gap-7 text-sm font-medium">
+          <nav className="hidden lg:flex items-center gap-6 xl:gap-7 text-sm font-medium">
             {site.navLinks.map(l => (
-              <Link key={l.href} href={l.href} className="hover:text-[var(--p)] transition-colors">{l.label}</Link>
+              <Link key={l.href} href={l.href} className="hover:text-[var(--p)] transition-colors whitespace-nowrap">{l.label}</Link>
             ))}
           </nav>
 
           <div className="hidden sm:flex items-center gap-2 sm:gap-3">
-            <Link href="/contact" className="hidden md:inline-flex pill-out !px-5 !py-2.5 !text-sm">Get Quote <ArrowRight className="w-3.5 h-3.5" /></Link>
-            <a href={`tel:${site.phoneRaw}`} className="inline-flex pill-fill !px-5 !py-2.5 !text-sm">
+            <Link href="/contact" className="hidden xl:inline-flex pill-out !px-5 !py-2.5 !text-sm whitespace-nowrap">Get Quote <ArrowRight className="w-3.5 h-3.5" /></Link>
+            <a href={`tel:${site.phoneRaw}`} className="inline-flex pill-fill !px-5 !py-2.5 !text-sm whitespace-nowrap">
               <Phone className="w-4 h-4" />{site.phone}
             </a>
           </div>
