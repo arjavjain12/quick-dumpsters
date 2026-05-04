@@ -29,7 +29,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <main>{children}</main>
         <Footer />
         <Script
-          src="https://onlyenable.vercel.app/widget.js?k=aw_23b44311423ec5957ecd5364"
+          src="https://onlyenable.com/widget.js?k=aw_23b44311423ec5957ecd5364"
           strategy="afterInteractive"
         />
       </body>
