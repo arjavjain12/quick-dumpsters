@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Script from 'next/script'
 import './globals.css'
 import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
@@ -27,6 +28,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Nav />
         <main>{children}</main>
         <Footer />
+        <Script
+          src="https://onlyenable.vercel.app/widget.js?k=aw_23b44311423ec5957ecd5364"
+          strategy="afterInteractive"
+        />
       </body>
     </html>
   )
